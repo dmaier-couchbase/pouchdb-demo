@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
+<head>
+  <title>PouchDB Demo</title>
+  <link rel="stylesheet" href="css/photon.min.css">
+  <script src="js/toolbar.js" charset="utf-8"></script>
+  <script src="js/content.js" charset="utf-8"></script>
+</head>
+<body>
+
+<div class="window">
+  <header class="toolbar toolbar-header">
+    <h1 class="title"><span class="icon icon-sound"></span>Audio Guide</h1>
+    <div class="toolbar-actions">
+      <div class="btn-group">
+        <button id="content-btn" class="btn btn-default">
+          <span class="icon icon-doc icon-text"></span>
+          Content
+        </button>
+        <button id="guestbook-btn" class="btn btn-default">
+          <span class="icon icon-home icon-text"></span>
+          Guest book
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Your app's content goes inside .window-content -->
+  <div class="window-content">
+    <div class="pane-group">
+      <div class="pane pane-sm sidebar">
+        <nav class="nav-group">
+          <h5 class="nav-group-title">Nav</h5>
+          <span id="welcome-item" class="nav-group-item">
+            <span class="icon icon-network"></span>
+            Welcome
+          </span>
+        </nav>
+      </div>>
+
+      <div id="contet-pane" class="pane">
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>
