@@ -8,7 +8,8 @@ $(function () {
 
     //Event handling
     $("#content-btn").click(function(){
-      console.log("Content Button clicked");
+      console.log("Content Button clicked");    
+        
     })
 
     $("#guestbook-btn").click(function(){

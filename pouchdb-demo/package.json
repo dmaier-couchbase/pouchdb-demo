@@ -3,7 +3,12 @@
   "version" : "0.1.0",
   "main"    : "main.js",
   "dependencies": {
-    "jquery": "^2.2.4"
+    "jquery": "^2.2.4",
+    "pouchdb": "^5.4.0",
+    "q": "^1.4.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0"
   },
   "scripts": {
    "start": "electron ."
