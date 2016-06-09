@@ -1,2 +1,3 @@
-pochdb-demo/node_modules
-pouchdb-demo/test-db
+/pouchdb-demo/node_modules/
+/pouchdb-demo/test-db/
+/tmp
