@@ -20,7 +20,7 @@ function _destroy(dbName) {
  * Initialize the repository DB without sync.
  */
 function _initLocal(dbName) {
-      
+          
         db = new PouchDB(dbName);
         return db.info();
 }
@@ -97,6 +97,17 @@ function _loadDemoData() {
 }
 
 /**
+ * Get all tracks
+ */
+function _allTracks() {
+
+    return db.allDocs({include_docs: true, startkey: 'track::' + 0, 
+	    	       endkey: 'track::' + Z, inclusive_end : true
+                      });
+}
+
+
+/**
  * Export some of the functions
  */
 module.exports = {
@@ -106,5 +117,6 @@ module.exports = {
     getTrack : _getTrack,
     addTrack : _addTrack,
     loadDemoData : _loadDemoData,
-    destroy : _destroy
+    destroy : _destroy,
+    allTracks : _allTracks
 }
